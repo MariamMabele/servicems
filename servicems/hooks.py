@@ -54,17 +54,20 @@ app_include_js = "/assets/servicems/js/shortcut.js"
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
-# Install required ERPNext links before after_install creates optional Fleet fields.
 # Restrict fixtures to fields owned by ServiceMS (never export all Custom Fields).
 fixtures = [
 	{
 		"dt": "Custom Field",
 		"filters": [
-			["name", "in", [
-				"Sales Invoice-service_job_card",
-				"Quotation-service_job_card",
-				"Stock Entry-service_job_card",
-			]],
+			[
+				"name",
+				"in",
+				[
+					"Sales Invoice-service_job_card",
+					"Quotation-service_job_card",
+					"Stock Entry-service_job_card",
+				],
+			],
 		],
 	},
 ]
@@ -73,8 +76,6 @@ fixtures = [
 # ------------
 
 # before_install = "servicems.install.before_install"
-after_install = "servicems.fleet_integration.ensure_service_job_card_tyre_fields"
-after_migrate = ["servicems.fleet_integration.ensure_service_job_card_tyre_fields"]
 
 # Desk Notifications
 # ------------------
