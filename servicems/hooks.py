@@ -32,7 +32,8 @@ app_include_js = "/assets/servicems/js/shortcut.js"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+# Fleet tyre movement fields; inactive when vsd_fleet_ms is not installed.
+doctype_js = {"Service Job Card": "public/js/service_job_card_tyre.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
